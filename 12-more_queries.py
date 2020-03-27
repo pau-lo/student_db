@@ -76,13 +76,15 @@ try:
     # 12. An INNER JOIN gets all rows of data from both tables if there is a
     # match between columns in both tables
     # query = 'SELECT students.first_name, students.last_name, scores.test_id, scores.score FROM students INNER JOIN scores ON students.student_id=scores.student_id WHERE scores.score <= 15 ORDER BY scores.test_id'
-    
+
     cursor.execute(query)
     results = cursor.fetchall()
+    # print(results)
 
     # 1. Get test score data
     for x in results:
-        print(x[0], " Min :", x[1], " Max :", x[2]," Rng :", x[3], " Sum :", x[4], " Avg :", x[5])
+        print(x[0], " Min :", x[1], " Max :", x[2], " Rng :", x[3],
+              " Sum :", x[4], " Avg :", x[5])
 
     # 2 - 3. Get 2 results
     # for x in results:

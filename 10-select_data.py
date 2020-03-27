@@ -14,9 +14,10 @@ try:
     cursor.execute(query)
 
     results = cursor.fetchall()
+    # print(results)
     for x in results:
         print(x[0], " ", x[1], " ", x[2], " ", x[3])
-
+    
 
 except mysql.connector.Error as error:
     print("Error :", error)
