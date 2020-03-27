@@ -5,9 +5,9 @@ verify_ssl = true
 
 [dev-packages]
 mysql-connector-python = "*"
+autopep8 = "*"
 
 [packages]
-autopep8 = "*"
 pylint = "*"
 
 [requires]

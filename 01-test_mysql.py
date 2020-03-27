@@ -2,8 +2,8 @@ import mysql.connector
 from mysql.connector import Error
 
 try:
-    connection = mysql.connector.connect(host='localhost', database='test_db',
-                                         user='root', password='xxxxxxxxxx')
+    connection = mysql.connector.connect(host='localhost', database='students',
+                                         user='studentadmin', password='password')
 
     if connection.is_connected():
         db_Info = connection.get_server_info()
