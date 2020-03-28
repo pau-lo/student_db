@@ -5,13 +5,12 @@ from datetime import datetime
 
 try:
     # Create a connection with the database
-    conn = mysql.connector.connect(host='localhost',
-                                   database='students', user='studentadmin',
-                                   password='password')
+    conn = mysql.connector.connect(host='localhost', database='students',
+                                   user='studentadmin', password='password')
 
-    query = """INSERT INTO tests VALUES ('2014-8-25', 'Q', 15, 1, NULL), 
-    ('2014-8-27', 'Q', 15, 1, NULL), ('2014-8-29', 'T', 30, 1, NULL), 
-    ('2014-8-29', 'T', 30, 2, NULL), ('2014-8-27', 'Q', 15, 4, NULL), 
+    query = """INSERT INTO tests VALUES ('2014-8-25', 'Q', 15, 1, NULL),
+    ('2014-8-27', 'Q', 15, 1, NULL), ('2014-8-29', 'T', 30, 1, NULL),
+    ('2014-8-29', 'T', 30, 2, NULL), ('2014-8-27', 'Q', 15, 4, NULL),
     ('2014-8-29', 'T', 30, 4, NULL)"""
 
     cursor = conn.cursor()

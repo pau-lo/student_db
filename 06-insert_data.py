@@ -5,9 +5,8 @@ from datetime import datetime
 
 try:
     # Create a connection with the database
-    conn = mysql.connector.connect(host='localhost',
-                                   database='students', user='studentadmin',
-                                   password='password')
+    conn = mysql.connector.connect(host='localhost', database='students',
+                                   user='studentadmin', password='password')
 
     query = """INSERT INTO scores VALUES 
     (1, 1, 15),(1, 2, 14),(1, 3, 28),(1, 4, 29),(1, 5, 15),(1, 6, 27),

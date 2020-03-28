@@ -3,9 +3,8 @@ from mysql.connector import Error
 
 try:
     # Create a connection with the database
-    conn = mysql.connector.connect(host='localhost',
-    database='students', user='studentadmin',
-    password='password')
+    conn = mysql.connector.connect(host='localhost', database='students',
+                                   user='studentadmin', password='password')
 
     # Get a list of all students
     # query = "SELECT * FROM students"

@@ -5,12 +5,11 @@ from datetime import datetime
 
 try:
     # Create a connection with the database
-    conn = mysql.connector.connect(host='localhost',
-                                   database='students', user='studentadmin',
-                                   password='password')
+    conn = mysql.connector.connect(host='localhost', database='students',
+                                   user='studentadmin', password='password')
 
     # Insert absences
-    query = """INSERT INTO absences VALUES 
+    query = """INSERT INTO absences VALUES
     (6, '2014-08-29'),(7, '2014-08-29'),(8, '2014-08-27')"""
 
     # The cursor object provides methods we can use to

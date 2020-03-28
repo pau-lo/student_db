@@ -2,8 +2,9 @@ import mysql.connector
 from mysql.connector import Error
 
 try:
-    conn = mysql.connector.connect(
-        host='localhost', database='students', user='studentadmin', password='password')
+    conn = mysql.connector.connect(host='localhost', database='students',
+                                   user='studentadmin', password='password')
+
     cursor = conn.cursor()
 
     query = """SELECT students.first_name, students.last_name, scores.test_id,
@@ -17,7 +18,7 @@ try:
     # print(results)
     for x in results:
         print(x[0], " ", x[1], " ", x[2], " ", x[3])
-    
+
 
 except mysql.connector.Error as error:
     print("Error :", error)

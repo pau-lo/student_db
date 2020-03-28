@@ -2,9 +2,8 @@ import mysql.connector
 from mysql.connector import Error
 
 try:
-    conn = mysql.connector.connect(
-        host='localhost', database='students', user='studentadmin', 
-        password='password')
+    conn = mysql.connector.connect(host='localhost', database='students',
+                                   user='studentadmin', password='password')
 
     query = """SELECT state, COUNT(state) AS "Amount"
             FROM students GROUP BY state HAVING amount > 1"""

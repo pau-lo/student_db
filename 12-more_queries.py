@@ -8,7 +8,9 @@ try:
     cursor = conn.cursor()
 
     # 1. Get test data
-    query = 'SELECT test_id, MIN(score), MAX(score), MAX(score) - MIN(score), SUM(score), AVG(score) FROM scores GROUP BY test_id'
+    query = """SELECT test_id, MIN(score), MAX(score), MAX(score) - MIN(score),
+                        SUM(score), AVG(score) FROM scores GROUP BY test_id"""
+
     cursor.execute(query)
     results = cursor.fetchall()
 

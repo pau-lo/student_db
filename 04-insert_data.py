@@ -5,17 +5,16 @@ from datetime import datetime
 
 try:
     # Create a connection with the database
-    conn = mysql.connector.connect(host='localhost',
-                                   database='students', user='studentadmin',
-                                   password='password')
+    conn = mysql.connector.connect(host='localhost', database='students',
+                                   user='studentadmin', password='password')
 
   # 3. Insert multiple rows with one query
     query = """INSERT INTO classes VALUES
-    ('English', NULL), ('Speech', NULL), ('Literature', NULL), 
-    ('Algebra', NULL), ('Geometry', NULL), ('Trigonometry', NULL), 
-    ('Calculus', NULL), ('Earth Science', NULL), ('Biology', NULL), 
-    ('Chemistry', NULL), ('Physics', NULL), ('History', NULL), ('Art', NULL), 
-    ('Gym', NULL)""";
+    ('English', NULL), ('Speech', NULL), ('Literature', NULL),
+    ('Algebra', NULL), ('Geometry', NULL), ('Trigonometry', NULL),
+    ('Calculus', NULL), ('Earth Science', NULL), ('Biology', NULL),
+    ('Chemistry', NULL), ('Physics', NULL), ('History', NULL), ('Art', NULL),
+    ('Gym', NULL)"""
 
     cursor = conn.cursor()
     # Insert multiple rows with one query
